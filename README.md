@@ -23,9 +23,9 @@ CHECKLIST
 ## Audio or Video has control : CHECK
 ## CSS/style.css is linked : CHECK
 ## README Lists all names : CHECK
-## Phone Layout is usable : 
+## Phone Layout is usable : CHECK
 ## Coded in VSCode : CHECK
 ## Form labels match inputs : CHECK
-## Demo roles assigned : CHECK
+## Demo roles assigned : 
 ## Alt text on every image : CHECK
 
