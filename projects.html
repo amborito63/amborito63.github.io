@@ -85,6 +85,7 @@
 				</footer>
 			</div>
 		</section>
+	<script>
 		const menuButton=document.querySelector('.menu');
 		const navigation=document.querySelector('.nav');
 		const setMenuOpen=open=>{navigation.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');menuButton.textContent=open?'×':'☰'};
