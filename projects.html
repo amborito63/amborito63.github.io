@@ -75,14 +75,16 @@
 				</div>
 			</div>
 		</section>
-	<footer class="footer">
+	</section>
+				<footer class="footer">
 					<span>© <span id="current-year">2025</span> Form &amp; Field Design Collective</span>
 					<div class="footer-links">
 						<a href="index.html">Back to top ↑</a>
 					</div>
 					<span>Made with intention.</span>
 				</footer>
-        <script>
+			</div>
+		</section>
 		const menuButton=document.querySelector('.menu');
 		const navigation=document.querySelector('.nav');
 		const setMenuOpen=open=>{navigation.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');menuButton.textContent=open?'×':'☰'};
