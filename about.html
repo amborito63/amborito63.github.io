@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f4f1eb">
+	<meta name="description" content="The portfolio of Form & Field, an independent design collective creating thoughtful digital and visual experiences.">
+	<title>Form &amp; Field — Design Collective</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="itcfp-styles.css" rel="stylesheet">
+</head>
+<body>
+	<header class="wrap topbar">
+		<a class="brand">
+			<span class="mark" aria-hidden="true"></span>
+			FORM &amp; FIELD
+		</a>
+		<button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+		<nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+			<a href="projects.html">Selected work</a>
+			<a href="about.html">Our approach</a>
+			<a href="team.html">The collective</a>
+		</nav>
+	</header>
+    <section class="wrap about">
+			<div class="about-grid">
+				<div class="about-photo">
+					<img src="STCourt.jpg" alt="ST Quadrangle, a bright and airy space with shared work tables">
+				</div>
+				<div class="about-copy">
+					<div class="label">A little about us</div>
+					<h2>Small by choice.<br><em>Big on perspective.</em></h2>
+					<p>Form &amp; Field is a small creative team made up of five people, each bringing their own ideas, skills, and style to the table. We work on different things, from branding and graphic design to digital projects and photography.</p>
+					<p>We work together on every project, sharing ideas and helping each other from the first plan to the final design. We keep things simple, hands-on, and creative because we believe the best work comes from people who enjoy creating together.</p>
+					<div class="stats">
+						<div><strong>05</strong><span>curious collaborators</span></div>
+						<div><strong>24</strong><span>projects made with care</span></div>
+						<div><strong>08</strong><span>years asking why</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <section class="film" id="film">
+			<div class="wrap film-grid">
+				<div class="film-copy">
+					<div class="label">03 — Watch &amp; explore</div>
+					<h2>Design is a team sport.</h2>
+					<p>A short look at ideas, iterations, and happy accidents behind thoughtful creative work. Press play for a little inspiration.</p>
+					<div class="note">Featured video: The Futur — Design education</div>
+				</div>
+				<div class="frame">
+					<iframe src="https://www.youtube-nocookie.com/embed/YqQx75OPRa0?rel=0" title="Design education video from The Futur" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
+        <script>
+		const menuButton=document.querySelector('.menu');
+		const navigation=document.querySelector('.nav');
+		const setMenuOpen=open=>{navigation.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');menuButton.textContent=open?'×':'☰'};
+		menuButton.addEventListener('click',()=>setMenuOpen(!navigation.classList.contains('open')));
+		navigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenuOpen(false)));
+		document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation.classList.contains('open')){setMenuOpen(false);menuButton.focus()}});
+		document.querySelector('#current-year').textContent=new Date().getFullYear();
+	    </script>
+    </body>
+</html>

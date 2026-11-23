@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f4f1eb">
+	<meta name="description" content="The portfolio of Form & Field, an independent design collective creating thoughtful digital and visual experiences.">
+	<title>Form &amp; Field — Design Collective</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="itcfp-styles.css" rel="stylesheet">
+</head>
+<body>
+	<header class="wrap topbar">
+		<a class="brand">
+			<span class="mark" aria-hidden="true"></span>
+			FORM &amp; FIELD
+		</a>
+		<button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+		<nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+			<a href="projects.html">Selected work</a>
+			<a href="about.html">Our approach</a>
+			<a href="team.html">The collective</a>
+		</nav>
+	</header>
+    <section class="manifesto" id="about">
+			<div class="wrap manifesto-grid">
+				<div class="label">02 — What we believe</div>
+				<div>
+					<h2>Good design goes beyond appearance. <em>It's about being thoughtful and noticing the details that matter.</em></h2>
+					<p>We believe that effective design can be simple yet still be distinctive. At times, the most straightforward concepts have the greatest effect. It's focused on ensuring that things not only appear attractive but also function effectively. We love exploring fresh concepts, focusing on the details, and crafting designs that resonate with and delight people.</p>
+					<div class="principles">
+						<span><b>01</b>Start with Ideas</span>
+						<span><b>02</b>See the Bigger Picture</span>
+						<span><b>03</b>Just do IT</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wrap about">
+			<div class="about-grid">
+				<div class="about-photo">
+					<img src="HARU.jpg" alt="Coder creating a website on a laptop in a bright studio">
+				</div>
+				<div class="about-copy">
+					<div class="label">Project 1</div>
+					<h2>Story Telling Project.<br><em>Testing the waters .</em></h2>
+					<p>Form &amp; Field is a cooperative design lab consisting of five imaginative people with diverse talents and viewpoints. Our efforts include brand identity, graphic design, digital experiences, photography, and all aspects that link them together.</p>
+					<p>We unite the appropriate individuals for each project, maintaining a process that is adaptable, cooperative, and engaged from the original concept to the ultimate outcome. We value collaboration, exchanging ideas, and crafting impactful designs through authentic teamwork.</p>
+					<div class="stats">
+						<div><strong>04</strong><span>Find your talents</span></div>
+						<div><strong>05</strong><span>Build Ideas</span></div>
+						<div><strong>06</strong><span>Build Unity with your Talents</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wrap about">
+			<div class="about-grid">
+				<div class="about-photo">
+					<img src="BotanicalGarden.jpg" alt="A bright and airy space with shared work tables in a botanical garden">
+				</div>
+				<div class="about-copy">
+					<div class="label">Project 2</div>
+					<h2>Space Lounge.<br><em>Minimalist Aestheticism</em></h2>
+					
+					<p>We believe that effective design can be simple yet still be distinctive. At times, the most straightforward concepts have the greatest effect. It's focused on ensuring that things not only appear attractive but also function effectively. We love exploring fresh concepts, focusing on the details, and crafting designs that resonate with and delight people</p>
+					<div class="stats">
+						<div><strong>07</strong><span>Know the People</span></div>
+						<div><strong>08</strong><span>Explore More Ideas</span></div>
+						<div><strong>09</strong><span>Make it Happen</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <script>
+		const menuButton=document.querySelector('.menu');
+		const navigation=document.querySelector('.nav');
+		const setMenuOpen=open=>{navigation.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');menuButton.textContent=open?'×':'☰'};
+		menuButton.addEventListener('click',()=>setMenuOpen(!navigation.classList.contains('open')));
+		navigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenuOpen(false)));
+		document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation.classList.contains('open')){setMenuOpen(false);menuButton.focus()}});
+		document.querySelector('#current-year').textContent=new Date().getFullYear();
+	</script>
+    </body>
+</html>

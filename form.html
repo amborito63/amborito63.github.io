@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f4f1eb">
+	<meta name="description" content="Start a conversation with Form & Field about your next creative project.">
+	<title>Contact — Form &amp; Field</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="itcfp-styles.css" rel="stylesheet">
+</head>
+<body>
+	<header class="wrap topbar">
+		<a class="brand" href="index.html">
+			<span class="mark" aria-hidden="true"></span>
+			FORM &amp; FIELD
+		</a>
+		<button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+		<nav class="nav" aria-label="Main navigation">
+			<a href="index.html">Home</a>
+			<a href="projects.html">Selected work</a>
+			<a href="about.html">Our approach</a>
+			<a href="team.html">The collective</a>
+			<a class="pill" href="form.html">Start a project ↗</a>
+		</nav>
+	</header>
+	<main>
+		<section class="wrap contact-page" id="contact">
+			<div class="contact-page-grid">
+				<div class="contact-copy">
+					<div class="label">05 — Start a conversation</div>
+					<h1>Have a good<br><em>idea?</em></h1>
+					<p>Tell us what you’re thinking. We’ll get back to you and figure out the next step together.</p>
+					<a class="contact-email" href="mailto:hello@formandfield.studio">hello@formandfield.studio ↗</a>
+				</div>
+				<div class="contact-form-panel">
+					<div class="contact-form-heading">
+						<span class="label">A few details</span>
+						<p>We’d love to hear from you.</p>
+					</div>
+					<form class="project-form">
+						<div class="contact-fields">
+							<div class="form-field">
+								<label for="name">Your name</label>
+								<input type="text" id="name" name="name" autocomplete="name" required>
+							</div>
+							<div class="form-field">
+								<label for="email">Email address</label>
+								<input type="email" id="email" name="email" autocomplete="email" required>
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="message">Tell us about your project</label>
+							<textarea id="message" name="message" rows="5" required></textarea>
+						</div>
+						<div class="form-submit-row">
+							<span>We’ll be in touch soon.</span>
+							<button type="submit">Send message <span aria-hidden="true">↗</span></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<footer class="form-footer">
+				<span>© <span id="current-year">2025</span> Form &amp; Field Design Collective</span>
+				<div class="footer-links">
+					<a href="index.html">Home</a>
+					<a href="team.html">The collective</a>
+					<a href="mailto:hello@formandfield.studio">Email ↗</a>
+				</div>
+				<span>Made with intention.</span>
+			</footer>
+		</section>
+	</main>
+	<script>
+		const menuButton = document.querySelector('.menu');
+		const navigation = document.querySelector('.nav');
+		const setMenuOpen = open => {
+			navigation.classList.toggle('open', open);
+			menuButton.setAttribute('aria-expanded', String(open));
+			menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+			menuButton.textContent = open ? '×' : '☰';
+		};
+		menuButton.addEventListener('click', () => setMenuOpen(!navigation.classList.contains('open')));
+		navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenuOpen(false)));
+		document.addEventListener('keydown', event => {
+			if (event.key === 'Escape' && navigation.classList.contains('open')) {
+				setMenuOpen(false);
+				menuButton.focus();
+			}
+		});
+		document.querySelector('#current-year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
