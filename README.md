@@ -1,11 +1,11 @@
 This project is a design collective which aims to show a minimalist design portfolio of Adamson University students taking an IT - Degree.
 
 Proponents
-## Tago, Saharoding
-## Montes, Francis Marvin
-## Bornasal, Kian Vanmark
-## Silvestre, Pablo Miguel
-## Cortez, Trojan Emmanuel
+## Tago, Saharoding (LEADER)
+## Montes, Francis Marvin (HTML)
+## Bornasal, Kian Vanmark (CSS)
+## Silvestre, Pablo Miguel (CONTENT)
+## Cortez, Trojan Emmanuel (QA)
 
 These following are the contents of our project:
 
