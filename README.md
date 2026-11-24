@@ -9,9 +9,12 @@ Proponents
 
 These following are the contents of our project:
 
-**Content 1: homepage** - The landing page of the website, shows our institution and insights on our work
+**Content 1: homepage** - The landing page of the website, shows our institution and insights on our work.
+
 **Content 2: selected work** - This page contains examples of our projects as a collective, such as the Story Teller.
+
 **Content 3: approach** - Shows how a small team like us can work together to make something beautiful.
+
 **Content 4: the collective** - Showcases the students who put efforts to make this project happen.
 
 
@@ -26,6 +29,6 @@ CHECKLIST
 ## Phone Layout is usable : CHECK
 ## Coded in VSCode : CHECK
 ## Form labels match inputs : CHECK
-## Demo roles assigned : 
+## Demo roles assigned : CHECK
 ## Alt text on every image : CHECK
 
